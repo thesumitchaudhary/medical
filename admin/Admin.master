@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="admin_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+     <style type="text/css">
+     .second-div{
+        display:flex;
+        justify-content:center; 
+       max-width:1050px;
+       height:138px;
+       margin:0 auto;
+      /* border:2px solid red;*/
+     }
+     .hero-image{
+      width:100%;
+      object-fit:cover;
+      
+     }
+     .third-div
+     {
+        max-width:1050px;
+       /*background-color:#ff33f5;*/
+       padding: 12px 0px;
+       margin:0 auto;
+       display:flex;
+       /* border:2px solid red;*/
+       justify-content:center;     
+       background: #00c3ff; /* fallback for old browser */
+       background: -webkit-linear-gradient( to right, #ffff1c, #00c3ff); /* Chorme 10-25, Safari 5.1-6 */
+       background: linear-gradient( to right, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     }
+     .third-div-button
+     {
+         padding:0px 25 px;
+         margin-left:30px;
+         margin-right:40px;   
+         background: #0052d4; /* fallback for old browser */
+         background: -webkit-linear-gradient( to right, #6fb1fc ,#4364f7, #0052d4); /* Chorme 10-25, Safari 5.1-6 */
+         background: linear-gradient( to right, #6fb1fc , #4364f7 , #0052d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     }   
+     .contenplaceholder{
+        max-width:1050px;
+        margin:0 auto;
+     }
+     </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="first-div">
+     <div class="second-div">
+         <asp:Image ID="Image1" runat="server" CssClass="hero-image" ImageUrl="~/images/admin.jpg" />
+     </div>
+     <div class="third-div">
+         <asp:Button  CssClass="third-div-button"  ID="btnCategory" runat="server" 
+         Text="Add Category" Font-Bold="true" Font-Size="Medium" BorderColor="#666666" 
+         CausesValidation="false"/>
+        <asp:Button  CssClass="third-div-button"  ID="btnAddProduct" runat="server" 
+         Text="Add Product" Font-Bold="true" Font-Size="Medium" BorderColor="#666666" 
+         CausesValidation="false" />
+         <asp:Button ID="Button1" CssClass="third-div-button" runat="server"
+          Text="Add product" Height="40px" Font-Bold="true" Font-Size="Medium"  BorderColor="#666666" 
+         CausesValidation="false" />
+         <asp:Button ID="Button2" CssClass="third-div-button"  runat="server" 
+         Text="Add product"  Font-Bold="true" Font-Size="Medium"  BorderColor="#666666" 
+         CausesValidation="false" />  
+         <asp:Button ID="Button3" CssClass="third-div-button" runat="server" 
+         Text="Logout" Font-Bold="true" Font-Size="Medium"  BorderColor="#666666" 
+         CausesValidation="false" />
+     </div>
+     <div class="contenplaceholder">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

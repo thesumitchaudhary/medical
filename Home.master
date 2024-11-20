@@ -1,0 +1,272 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Home.master.cs" Inherits="Home" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+  <style type="text/css">
+     
+   html{   
+         scroll-behavior:smooth;
+       } 
+   .auto-style02{
+         width: 683px;
+         background-color:#c9b1c4; 
+       }   
+   .auto-style03{
+         width: 746px;
+         height: 80px;
+         background-color:#c9b1c4;
+      }     
+   .auto-style04{
+         width: 265px;
+         background-color:#c9b1c4; 
+       }
+   .auto-style05{
+        border-spacing: 0px;
+        background-color:White;
+     }
+   .auto-style06 {
+        width: 256px;
+        background-color:#c9b1c4; 
+        border-collapse: collapse; 
+      }
+   .auto-style07 {    
+      margin-top: 0px;
+      }  
+   .auto-style08 {
+       margin-left: 0px;
+       }
+   #Menu1{  
+       background-color:White
+       }
+   .foot-panel1{
+        border:5px dooted black;
+        border-spacing: 0px;  
+        }
+   .attribute-link{
+        display:block;
+        color:Black;
+        text-decoration:none;
+       }
+</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+     <div>      
+   <table style="margin:0 auto;" class="auto-style05" border="0">
+       <tr style="width:1100px; height:50px;" > 
+            <td class="auto-style04">
+               <asp:Image ID="Image1" runat="server" Height="103px" ImageUrl="~/images/MEDICAL.png" Width="122px" />
+            </td> 
+             <td align="center" class="auto-style02">
+                <asp:Label ID="Label1" runat="server" Text="Life-Care Medical Store" Font-Bold="True" Font-Names="Copperplate Gothic Bold" ForeColor="Black" Font-Size="27pt"></asp:Label>
+             </td>
+             <td style="text-align:right" class="auto-style06">
+                <asp:ImageButton ID="ImageButton1" runat="server" Height="80px"  
+                     style="text-align:left" PostBackUrl="~/addtocart.aspx" 
+                 ImageUrl="~/images/shopping_cart-01.png" Width="90px" 
+                     CssClass="auto-style08"  />
+             </td>
+         </tr>
+         <tr>  
+           <td class="auto-style03" colspan="3" >
+          <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" StaticSubMenuIndent="19px" Height="70px"  Width="1226px"              BackColor="#c9b1c4" BorderColor="#c9b1c4" 
+             Font-Bold="True" Font-Size="18pt" >
+          <Items>
+               <asp:MenuItem Text="Home" Value="New Item" NavigateUrl="~/Home1.aspx"></asp:MenuItem>
+               <asp:MenuItem Text="All Medicine" Value="all product" NavigateUrl= "~/All product.aspx"></asp:MenuItem>
+               <asp:MenuItem Text="User Login" Value="user login" NavigateUrl="~/Login1.aspx"></asp:MenuItem>
+               <asp:MenuItem Text="Registation" Value="registation" NavigateUrl="~/Registration1.aspx"></asp:MenuItem>
+               <asp:MenuItem Text="About Us" Value="about us" NavigateUrl="~/AboutUS.aspx"></asp:MenuItem>
+          </Items> 
+                <StaticHoverStyle BackColor="#c9b1c4" ForeColor="White" Height="40px" />
+                <StaticMenuItemStyle Font-Bold="True" Font-Size="Larger" ForeColor="Black" HorizontalPadding="65px" />
+                 <StaticSelectedStyle BackColor="#c9b1c4" BorderColor="#FF6666" BorderStyle="Inset" ForeColor="#666666" Height="40px" />
+          </asp:Menu>
+       &nbsp;</td>
+     </tr>
+     <%-- <tr style="width:1110px;height:310px;">
+       <td colspan="3">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+         </asp:ScriptManager>
+           <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+               <ContentTemplate>
+                  <asp:Timer ID="Timer1" runat="server" Interval="2000" OnTick="Timer1_Tick" ></asp:Timer>
+                  <asp:Image ID="Image2" runat="server" CssClass="auto-style7" Height="402px" Width="1214px" />
+              </ContentTemplate>
+          </asp:UpdatePanel>
+        </td>
+     </tr>--%>
+      <tr>
+          <td colspan="3">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+                </td>
+       </tr>
+          <tr style=" background-color:#eef4ff;text-align:center;color:Black">
+             <td colspan="3">
+                <asp:Image ID="Image3" runat="server" Height="30px" Width="30px" ImageUrl="~/images/footer-backtotop.png"/>
+                  <asp:HyperLink ID="HyperLink19" CssClass="attribute-link" runat="server" NavigateUrl="#" >Back To Top</asp:HyperLink>
+              </td>
+         </tr>
+          </table>
+             <table style="margin:0 auto;width:100%" class="auto-style05" border="0"> 
+                <tr style="background-color:#eef4ff;color:Black">
+               <td>
+                   <h3 >Company</h3>
+                     <br />
+                     <asp:HyperLink ID="HyperLink1" CssClass="attribute-link"  runat="server"
+                      NavigateUrl="~/AboutUS.aspx">About Us</asp:HyperLink>
+                    <br />
+                     <asp:HyperLink ID="HyperLink2" CssClass="attribute-link" runat="server"
+                     NavigateUrl="~/Careers.aspx">Careers</asp:HyperLink>
+                     <br />       
+                     <asp:HyperLink ID="HyperLink3" CssClass="attribute-link"                              runat="server"
+                       NavigateUrl="~/Blog.aspx">Blog</asp:HyperLink>
+                     <br />
+                     <asp:HyperLink ID="HyperLink5" CssClass="attribute-link" runat="server"
+                      NavigateUrl="~/Partner with Life-Care Medical Store.aspx">Partner with Life-Care Medical Store </asp:HyperLink>
+                     <br />
+                     <asp:HyperLink ID="HyperLink6" CssClass="attribute-link" runat="server"
+                      NavigateUrl="~/Sell at Life-Care Medical Store.aspx">Sell at Life-Care Medical Store</asp:HyperLink> 
+                      <br />   
+                </td>       
+                <td rowspan="2">
+                <h3 >Featured Categories</h3>
+                <br />
+                 <asp:HyperLink ID="HyperLink7" CssClass="attribute-link" runat="server"
+                     NavigateUrl="~/All product.aspx">Top  product</asp:HyperLink>
+               <br />
+                 <asp:HyperLink ID="HyperLink8" CssClass="attribute-link" runat="server"
+                   NavigateUrl="~/All Product.aspx">Elderly Care</asp:HyperLink>
+               <br />
+                  <asp:HyperLink ID="HyperLink9" CssClass="attribute-link" runat="server"
+                    NavigateUrl="~/All Product.aspx">Personal Care</asp:HyperLink>
+               <br />
+                  <asp:HyperLink ID="HyperLink10" CssClass="attribute-link" runat="server"
+                    NavigateUrl="~/All Product.aspx">Healthcare Devices </asp:HyperLink>
+               <br />
+                 <asp:HyperLink ID="HyperLink11" CssClass="attribute-link" runat="server"
+                   NavigateUrl="~/All Product.aspx">Health Food and Drinks </asp:HyperLink>
+               <br />
+                  <asp:HyperLink ID="HyperLink12" CssClass="attribute-link" runat="server"
+                    NavigateUrl="~/All Product.aspx">Skin Care</asp:HyperLink>
+                <br />
+                  <asp:HyperLink ID="HyperLink24" CssClass="attribute-link" runat="server"
+                    NavigateUrl="~/All Product.aspx">Mother and Baby Care</asp:HyperLink>
+                <br />
+                  <asp:HyperLink ID="HyperLink25" CssClass="attribute-link" runat="server"
+                    NavigateUrl="~/All Product.aspx">Accessories & Wearables</asp:HyperLink>
+                <br />
+                  <asp:HyperLink ID="HyperLink26" CssClass="attribute-link" runat="server"
+                    NavigateUrl="~/All Product.aspx">Fitness Supplements</asp:HyperLink>
+                 <br />    
+                  <asp:HyperLink ID="HyperLink27" CssClass="attribute-link" runat="server"
+                    NavigateUrl="~/All Product.aspx">Ayurvedic Care</asp:HyperLink>
+                 <br />
+                  <asp:HyperLink ID="HyperLink28" class="attribute-link" runat="server"
+                    NavigateUrl="~/All Product.aspx">Sexual Wellness</asp:HyperLink>
+                 <br />
+                  <asp:HyperLink ID="HyperLink29" class="attribute-link" runat="server"
+                   NavigateUrl="~/All Product.aspx">Mega Clearance Sale</asp:HyperLink>
+                <br /> 
+                  <asp:HyperLink ID="HyperLink30" class="attribute-link" runat="server" 
+                  NavigateUrl="~/All Product.aspx">Diabetic Care</asp:HyperLink>
+                <br />
+                  <asp:HyperLink ID="HyperLink31" class="attribute-link" runat="server"
+                   NavigateUrl="~/All Product.aspx">Health Condition</asp:HyperLink>
+                <br />
+                  <asp:HyperLink ID="HyperLink32" class="attribute-link" runat="server"
+                    NavigateUrl="~/All Product.aspx">Winter Store</asp:HyperLink>
+                 <br />
+                   <asp:HyperLink ID="HyperLink33" class="attribute-link" runat="server"
+                      NavigateUrl="~/All Product.aspx">Covid Essential</asp:HyperLink> 
+                  <br />  
+             </td>    
+             <td>
+                 <h3 >Need Help</h3>
+                 <br />
+                 <asp:HyperLink ID="HyperLink13" class="attribute-link" runat="server"
+                    NavigateUrl="~/Browse All Medicine.aspx">Browse All Medicine</asp:HyperLink>
+                 <br />
+                 <asp:HyperLink ID="HyperLink14" class="attribute-link" runat="server">Browse All Molecule</asp:HyperLink>
+                 <br /> 
+                 <asp:HyperLink ID="HyperLink15" class="attribute-link" runat="server">Browse All Cities</asp:HyperLink>
+                 <br />
+                 <asp:HyperLink ID="HyperLink16" class="attribute-link" runat="server">Browse All Areas</asp:HyperLink>
+        		 <br />
+                 <asp:HyperLink ID="HyperLink17" class="attribute-link" runat="server">Browse All Stores </asp:HyperLink>
+                 <br />
+                 <asp:HyperLink ID="HyperLink18" class="attribute-link" runat="server">FAQs</asp:HyperLink>
+                 <br />    
+              </td>
+              <td>
+                <h2>Follows Us on</h2>
+                 <asp:Image ID="Image4" runat="server" Height="40px" Width="40px" ImageUrl="~/images/footer-followsus.png"/>
+                    		<asp:Image ID="Image5" runat="server" Height="40px" Width="40px" ImageUrl="~/images/footer-followsus1.png"/>
+                    		<asp:Image ID="Image6" runat="server" Height="40px" Width="40px" ImageUrl="~/images/footer-followsus2.png"/>
+                    		<asp:Image ID="Image7" runat="server" Height="40px" Width="40px" ImageUrl="~/images/footer-followsus3.png"/>
+                </td>
+           </tr>
+       	    <tr style=" background-color:#eef4ff;color:Black">
+             <td>
+               <h3 >Our Services</h3>
+                  <br />
+                  <asp:HyperLink ID="HyperLink20" class="attribute-link" runat="server">Order Medicine</asp:HyperLink>
+                  <br />
+                  <asp:HyperLink ID="HyperLink21" class="attribute-link" runat="server">Healthcare & Products</asp:HyperLink>
+               	  <br />
+                  <asp:HyperLink ID="HyperLink22" class="attribute-link" runat="server">Lab Tests</asp:HyperLink>
+                  <br />
+                  <asp:HyperLink ID="HyperLink23" class="attribute-link" runat="server">Find Nearest Collection Center</asp:HyperLink>
+                  <br />
+              </td> 
+              <td>
+                <h3 >Policy Info</h3>
+                 <br />
+                 <asp:HyperLink ID="HyperLink34" class="attribute-link" runat="server">Editorial Policy</asp:HyperLink>
+                 <br />
+                <asp:HyperLink ID="HyperLink35" class="attribute-link" runat="server">Privacy Policy</asp:HyperLink>
+               	 <br />
+                <asp:HyperLink ID="HyperLink36" class="attribute-link" runat="server">vulnerability Disclosure Policy</asp:HyperLink>
+                 <br />
+                 <asp:HyperLink ID="HyperLink37" class="attribute-link" runat="server">Terms and Conditions</asp:HyperLink>
+                 <br />
+                <asp:HyperLink ID="HyperLink38" class="attribute-link" runat="server">Customer Support Policy </asp:HyperLink>
+                <br />
+                <asp:HyperLink ID="HyperLink39" class="attribute-link" runat="server">Return Policy</asp:HyperLink> 
+                <br />    
+             </td>
+               <td></td>
+           </tr>
+         </table>
+           <table style="margin:0 auto;width:100%" class="auto-style5" border="0">
+               <tr style=" background-color:#eef4ff;color:Black">
+                <td colspan="3">
+                  <h3 >Our Payment Partners</h3>
+                   <asp:Image ID="Image8" runat="server" Height="40px" Width="70px" ImageUrl="~/images/googlepay-footer.png"/>
+                   <asp:Image ID="Image9" runat="server" Height="40px" Width="70px" ImageUrl="~/images/paytm-footer.png"/>
+                   <asp:Image ID="Image10" runat="server" Height="40px" Width="70px" ImageUrl="~/images/phonepe-footer.png"/>
+                   <asp:Image ID="Image11" runat="server" Height="40px" Width="70px" ImageUrl="~/images/amazon-footer.png"/>
+                   <asp:Image ID="Image12" runat="server" Height="40px" Width="70px" ImageUrl="~/images/mobikwik-footer.png"/>
+                   <asp:Image ID="Image13" runat="server" Height="40px" Width="70px" ImageUrl="~/images/olamoney-footer.png"/>
+                   <asp:Image ID="Image14" runat="server" Height="40px" Width="70px" ImageUrl="~/images/maestro-footer.png"/>
+                   <asp:Image ID="Image15" runat="server" Height="40px" Width="70px" ImageUrl="~/images/mastercard-footer.png"/>
+                   <asp:Image ID="Image16" runat="server" Height="50px" Width="70px" ImageUrl="~/images/visa-footer.png"/>
+                   <asp:Image ID="Image17" runat="server" Height="40px" Width="70px" ImageUrl="~/images/rupay-footer.png"/>
+                 </td>
+              </tr>        
+              <tr style=" background-color:#eef4ff;text-align:right;color:Black">
+                  <td colspan="3">
+                     &copy;2024online life-care madical store pvt.ltd ||  All rigths Reserved 
+                  </td>
+              </tr>  
+     </table>     
+   </div>  
+    </form>
+</body>
+</html>
